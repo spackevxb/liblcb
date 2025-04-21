@@ -538,6 +538,7 @@ tpt_loop(tpt_p tpt) {
     (TP_EV_READ == (event) ? TP_EV_WRITE : TP_EV_READ)
 
 static int
+#define SYS_pidfd_open 434 
 pidfd_open(pid_t pid, unsigned int flags) {
 	return syscall(SYS_pidfd_open, pid, flags);
 }
